@@ -1,5 +1,4 @@
 # VideoConv
-<<<<<<< HEAD
 A video conversion tool that allows you to take one image or video and one audio file to make a video.
 ## important information
 This Script requires that you have FFmpeg setup in your system environment tables or that you run this script in the same sirectory as your FFmpeg executable.
