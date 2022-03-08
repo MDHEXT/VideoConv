@@ -45,7 +45,10 @@ IF !mode! LEQ 2 (
     IF !mode! EQU 2 SET "type=stream_loop -1"
 ) ELSE ( ECHO Please input a valid mode selection )
 
-ffmpeg -%type% -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
+ECHO [33m%version%[0m
+ECHO [33m%build%[0m
+
+ffmpeg -v warning -%type% -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
 
 GOTO :EOF
 
