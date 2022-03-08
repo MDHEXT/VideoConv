@@ -5,10 +5,12 @@ This Script requires that you have FFmpeg setup in your system environment table
 To setup FFmpeg in your system environment Tables:
 * Download a copy of [FFmpeg](https://www.ffmpeg.org/download.html#build-windows) for Windows
 * If you're on windows 10 or 11, simply press the Windows Key and s keys simultaniously to bring up the search window. From there, simply type "Edit the system environment variables" 
+    
     ![image](https://user-images.githubusercontent.com/42657178/157209063-115067e7-4fa7-4647-a59f-a6a778855a9d.png)
    
 * if you're on an earlier revision of the Windows Operating System, You'll need to simultaniously hit the Windows Key and X button to bring up the Power user task menu. From there, click "system" then "advanced system settings" in the window that opens and then navigate to the "Advanced" tab in the next window that opens.
 * After that, in the window that opens, click on the "Environment Variables" button near the bottom right corner of the window.
+    
     ![image](https://user-images.githubusercontent.com/42657178/157209462-47992666-552d-4c27-9090-abffb82c1340.png)
 
 * Next, in the windows that opens, click on the "path" variable and then click "edit".
