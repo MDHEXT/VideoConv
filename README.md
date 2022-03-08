@@ -24,3 +24,19 @@ To setup FFmpeg in your system environment Tables:
 * Simply Paste the path to your FFmpeg Executable there and click "ok" to save your changes.
 
     ![image](https://user-images.githubusercontent.com/42657178/157210209-35d66d71-4650-4e56-b2c6-4fe2d8f0b16c.png)
+
+## How to use
+
+Always make sure to place your image or video first
+``-i image.png -i audio.mp3``
+Specify whether your input image or video is such:
+
+* 1 is for an image file
+* 2 is for a video file
+
+``-i image.png -m 1``
+
+Always specify an output folder, as of the time of writing this, I have not implemented any automatic path output.
+
+``-o [outputfilename]`` or ``-o [C:\outputpath\outputfilename]``
+File Extensions added to the output name or path **WILL** be ignored and output will always be in the MKV container.
