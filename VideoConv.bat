@@ -1,4 +1,4 @@
-@ECHO off
+:: ECHO off
 :: video conversion script, MDHEXT 2022
 :: The Purpose of this script is to take one input image or video and one input audio file and output a video with the image/video/gif looped for the length of the audio file.
 :: This is already pretty simple, so this script is mostly for fun.
@@ -41,11 +41,11 @@ FOR /F "delims=" %%a in ('ffmpeg -version') DO (
 
 IF NOT DEFINED mode ECHO Please input a video source type to continue & GOTO :EOF
 IF !mode! LEQ 2 (
-    IF !mode! EQU 1 SET "type=-loop"
-    IF !mode! EQU 2 SET "type=-stream_loop"
+    IF !mode! EQU 1 SET "type=loop 1"
+    IF !mode! EQU 2 SET "type=stream_loop -1"
 ) ELSE ( ECHO Please input a valid mode selection )
 
-ffmpeg %type% 1 -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
+ffmpeg -%type% -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
 
 GOTO :EOF
 
