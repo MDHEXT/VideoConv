@@ -1,4 +1,4 @@
-:: ECHO off
+@ECHO off
 :: video conversion script, MDHEXT 2022
 :: The Purpose of this script is to take one input image or video and one input audio file and output a video with the image/video/gif looped for the length of the audio file.
 :: This is already pretty simple, so this script is mostly for fun.
