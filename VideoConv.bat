@@ -4,6 +4,7 @@
 :: This is already pretty simple, so this script is mostly for fun.
 
 SETLOCAL ENABLEDELAYEDEXPANSION
+
 IF /i NOT "%~1" == "" ( 
     IF /i NOT "%~1" == "help" (
         GOTO :variableconfig
@@ -30,10 +31,25 @@ IF NOT "%~1" == "" (
 SHIFT & GOTO :variableconfig
 )
 
-IF NOT DEFINED mode ECHO Please input a video source type to continue & GOTO :EOF
+FOR /F "delims=" %%a in ('ffmpeg -version') DO (
+	IF NOT DEFINED version (
+		SET "version=%%a"
+	) ELSE IF NOT DEFINED build (
+		SET "build=%%a"
+	)
+)
 
-ECHO var1 = %input% var2 = %input2% out = %output%
+IF NOT DEFINED mode ECHO Please input a video source type to continue & GOTO :EOF
+IF !mode! LEQ 2 (
+    IF !mode! EQU 1 SET "type=-loop"
+    IF !mode! EQU 2 SET "type=-stream_loop"
+) ELSE ( ECHO Please input a valid mode selection )
+
+ffmpeg %type% 1 -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
+
 GOTO :EOF
+
 :help_message
 ECHO Video Conversion Help Test
+
 ENDLOCAL
