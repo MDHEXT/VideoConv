@@ -14,8 +14,8 @@ IF /i NOT "%~1" == "" (
         )
     ) ELSE (
         GOTO :help_message 
-        )
     )
+)
 
 :variableconfig
 IF NOT "%~1" == "" (
