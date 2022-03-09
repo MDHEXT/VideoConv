@@ -7,15 +7,15 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 
 IF /i NOT "%~1" == "" ( 
     IF /i NOT "%~1" == "help" (
-        GOTO :variableconfig
-    ) ELSE (
-        IF /i "%~1" == "h" ( 
+        IF /i "%~1" == "h" (
             GOTO :help_message
         ) ELSE ( 
-            GOTO :variableconfig 
+            GOTO :variableconfig
+        )
+    ) ELSE (
+        GOTO :help_message 
         )
     )
-)
 
 :variableconfig
 IF NOT "%~1" == "" (
