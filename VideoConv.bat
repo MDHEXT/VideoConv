@@ -2,6 +2,7 @@
 :: video conversion script, MDHEXT 2022
 :: The Purpose of this script is to take one input image or video and one input audio file and output a video with the image/video/gif looped for the length of the audio file.
 :: This is already pretty simple, so this script is mostly for fun.
+:: NOTE: Thise script is EXTREMELY incomplete.
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 
@@ -15,7 +16,7 @@ IF /i NOT "%~1" == "" (
     ) ELSE (
         GOTO :help_message 
     )
-)
+) ELSE ( GOTO :help_message )
 
 :variableconfig
 IF NOT "%~1" == "" (
@@ -50,9 +51,9 @@ ECHO [33m%build%[0m
 
 ffmpeg -v warning -%type% -i "%input%" -i "%input2%" -shortest -acodec copy -vcodec copy "%output%"
 
+ENDLOCAL
+
 GOTO :EOF
 
 :help_message
-ECHO Video Conversion Help Test
-
-ENDLOCAL
+ECHO Help Coming soon, follow the instructions on GitHub!
