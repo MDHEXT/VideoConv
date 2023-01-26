@@ -1,7 +1,7 @@
 # VideoConv
 A video conversion tool that allows you to take one image or video and one audio file to make a video.
 ## important information
-This Script requires that you have FFmpeg setup in your system environment tables or that you run this script in the same sirectory as your FFmpeg executable.
+This Script requires that you have FFmpeg setup in your system environment tables or that you run this script in the same directory as your FFmpeg executable.
 To setup FFmpeg in your system environment Tables:
 * Download a copy of [FFmpeg](https://www.ffmpeg.org/download.html#build-windows) for Windows
 * If you're on windows 10 or 11, simply press the Windows Key and s keys simultaniously to bring up the search window. From there, simply type "Edit the system environment variables" 
