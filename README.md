@@ -13,11 +13,11 @@ To setup FFmpeg in your system environment Tables:
     
     ![image](https://user-images.githubusercontent.com/42657178/157209462-47992666-552d-4c27-9090-abffb82c1340.png)
 
-* Next, in the windows that opens, click on the "path" variable and then click "edit".
+* Next, in the window that opens, click on the "path" variable and then click "edit".
 
     ![image](https://user-images.githubusercontent.com/42657178/157210011-6f7faa90-15ad-4641-836e-cf8313a5ca78.png)
 
-* Next, Click the "New" button near the top right corner of the new window that opens up. You shoul now see a blinking cursor indicating that you are typing.
+* Next, Click the "New" button near the top right corner of the new window that opens up. You should now see a blinking cursor indicating that you are typing.
 
     ![image](https://user-images.githubusercontent.com/42657178/157211692-7b15a1a9-2ab7-429e-b260-312cb88c8e4e.png)
 
